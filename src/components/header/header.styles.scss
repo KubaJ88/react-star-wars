@@ -1,0 +1,59 @@
+@import "../../styles/base.scss";
+
+.header {
+    grid-column: full-start/full-end;
+    grid-template-columns: inherit;
+    display: grid;
+
+    align-items: center;
+
+    .star_header {
+        height: 20rem;
+        width: 20rem;
+        grid-column: full-start / col-start 1;
+        cursor: pointer;
+
+        @media only screen and (max-width: $bp-large) {
+            margin-left: 4rem;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            margin-right: 6rem;
+    
+        }
+    }
+    h2 {
+        font-size: 3rem;
+        line-height: 4.2rem;
+        font-weight: 700;
+        margin-left: 2rem;
+
+        z-index: 10;
+        color: white;
+        mix-blend-mode: difference;
+        position: relative;
+        grid-column: col-start 2 / col-end 5;
+
+        @media only screen and (max-width: $bp-large) {
+            grid-column: col-start 3 / col-end 5;
+        }
+
+        @media only screen and (max-width: $bp-small) {
+            grid-column: span 1;
+            grid-row: 1;
+            font-size: 2.5rem;
+            line-height: 2rem;
+        }
+
+        .line {
+            margin-bottom: 8px;
+            height: 56px;
+            position: relative;
+            overflow: hidden;
+
+            span {
+                position: absolute;
+            }
+        }
+    }
+}

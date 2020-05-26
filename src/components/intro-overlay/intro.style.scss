@@ -1,0 +1,47 @@
+@import "../../styles/base.scss";
+
+.intro-overlay {
+  overflow: hidden;
+
+  .top {
+    height: 150vh;
+    position: fixed;
+    width: 100vw;
+    z-index: 8;
+    top: -2rem;
+    left: -2rem;
+
+    .overlay-top {
+      position: fixed;
+      height: 100%;
+      width: 100vw;
+      background: white;
+      bottom: 0;
+      left: 0;
+      right: 0;
+
+      &:nth-child(2) {
+        left: 33.3333%;
+      }
+      &:nth-child(3) {
+        left: 66.6666%;
+      }
+    }
+  }
+ 
+}
+
+.star {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: 10;
+  height: 80rem;
+  width: 80rem;
+
+  @media only screen and (max-width: $bp-small) {
+    height: 50rem;
+    width: 50rem;
+  }
+}

@@ -1,0 +1,84 @@
+@import "../../styles/base.scss";
+
+.main {
+    grid-template-columns: inherit;
+    grid-column: full-start / full-end;
+    color: white;
+    display: grid;
+    grid-template-rows: minmax(30rem, max-content);
+    row-gap: 3rem;
+
+    .movie-info {
+        grid-template-columns: inherit;
+        grid-column: full-start / full-end;
+        height: 100%;
+        grid-template-rows: inherit;
+        display: grid;
+        background-color: rgba(#121212, 0.2);
+        box-shadow: 0 0.5rem 0.5rem rgba($color-primary, 0.2);
+        border-radius: 3px;
+        padding: 2rem 0;
+        align-items: center;
+        align-content: center;
+
+        &__img {
+            grid-column: col-start 6 / full-end;
+
+            height: 100%;
+            width: 100%;
+            background-position: center;
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &__text {
+            font-size: 3rem;
+            text-align: center;
+
+            grid-column: col-start 1 / col-end 5;
+            display: flex;
+            align-items: center;
+
+            h1 {
+                flex: 0 0 40%;
+                font-weight: 700;
+            }
+
+            &__details {
+                font-size: 2.5rem;
+                flex: 1;
+                display: flex;
+                align-items: center;
+                flex-wrap: wrap;
+                justify-content: space-evenly;
+                flex-direction: row;
+
+                &--item {
+                    display: flex;
+                    flex-direction: column;
+                    padding: 1.4rem;
+
+                    .item-name {
+                        font-size: 2rem;
+                        font-weight: 300;
+                    }
+
+                    h5 {
+                        font-size: 2.5rem;
+                        font-weight: 500;
+                    }
+                }
+            }
+        }
+    }
+
+    .characters {
+        grid-template-columns: inherit;
+        grid-column: col-start 1 / col-end 6;
+
+        h1 {
+            font-size: 4rem;
+            margin-bottom: 2rem;
+        }
+    }
+}

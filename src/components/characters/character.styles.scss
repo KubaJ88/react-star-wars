@@ -1,0 +1,56 @@
+@import "../../styles/base.scss";
+
+.character {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+
+    .character-box {
+        background-color: white;
+        box-shadow: 0 0.5rem 1rem rgba($grey, 0.2);
+        transition: all 0.4s cubic-bezier(0.47, 0, 0.745, 0.715);
+        border-radius: 1rem;
+        background-color: rgba(#121212, 0.2);
+        padding: 1rem;
+        opacity: 0.8;
+        position: relative;
+
+        &:hover {
+            box-shadow: 0 0.5rem 1rem rgba($color-primary, 0.5);
+            transform: translateY(-3px);
+            background-color: rgba(#121212, 0.5);
+            opacity: 1;
+            transition: all 0.6s cubic-bezier(0.47, 0, 0.745, 0.715);
+
+            .character-box__others {
+                opacity: 1;
+            }
+
+            .character-box__name {
+                left: 80%;
+                font-size: 1.3rem;
+            }
+        }
+
+        &__name {
+            font-size: 1.6rem;
+            font-weight: 700;
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            text-transform: uppercase;
+            text-align: center;
+            color: white;
+            transition: all 0.6s cubic-bezier(0.47, 0, 0.745, 0.715);
+        }
+
+        &__others {
+            font-size: 1.4rem;
+            font-weight: 500;
+            opacity: 0;
+            overflow: hidden;
+            transition: all 0.6s cubic-bezier(0.47, 0, 0.745, 0.715);
+        }
+    }
+}

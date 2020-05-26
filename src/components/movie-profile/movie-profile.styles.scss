@@ -1,0 +1,124 @@
+@import '../../styles/base.scss';
+
+.movie-preview {
+
+    grid-template-columns: inherit;
+    grid-column: col-start 4 / full-end;
+    // margin-right: 2rem;
+    // grid-template-rows: inherit;
+    height: 30rem;
+
+    display: flex;
+
+    @media only screen and (max-width: $bp-small) {
+        margin-top: 5rem;
+
+    }
+  
+
+
+    &__details { 
+        font-size: 2rem;
+        color: white;
+        margin-right: 2rem;
+        // background-color: rosybrown;
+        flex: 0 0 50%;
+        // align-content: center;
+        text-align: center;
+
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+
+        h1 {
+            margin: auto 0;
+            font-size: 4rem;
+            text-transform: uppercase;
+            font-weight: 900;
+
+            @media only screen and (max-width: $bp-large) {
+                font-size: 3rem;
+            }
+        }
+
+        h5 {
+            font-size: 1.4rem;
+            font-weight: 400;
+        }
+
+        .year {
+            font-size: 3rem;
+            font-weight: 500;
+
+            @media only screen and (max-width: $bp-large) {
+                font-size: 2rem;
+            }
+        }
+        
+
+
+
+        .btn {
+            display: block;            
+            padding: 1rem 2rem;
+            margin: 2rem;
+            font-family: inherit;
+            // margin-top: auto;
+            font-weight: 300;
+            box-shadow: 0 1rem 1rem rgba($color-primary, .15);
+            background-color: $color-primary;
+            text-decoration: none;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+            text-transform: uppercase;
+            color: white;
+            transition: all .5s cubic-bezier(.17,.67,.83,.67);
+            // overflow: visible;
+
+            &:hover {
+                transform: translateY(-3px);
+                box-shadow: 1rem 2rem 3rem rgba($color-primary, .8);
+                // color: crimson;
+                // margin-right: -15rem;
+                // text-align: left;
+            }
+
+            &:active,
+            &:focus {
+                outline: none;
+                transform: translateY(-1px);
+                box-shadow: 0 .5rem 1rem rgba($color-primary,.2);
+            }
+
+            
+            
+            
+        }
+
+    }
+
+    &__image {
+        // background-image: url('../../assets/New_Hope.jpg');
+        height: 100%;
+        width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+        position: relative;
+        // width: 200%;
+        
+        // border-radius: 2rem;
+        // backface-visibility: hidden;
+        // overflow: hidden;
+        transition: transform .8s ease-in-out;
+        // -webkit-clip-path: ppolygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);
+        // clip-path: polygon(50% 0%, 100% 50%, 50% 100%, 0% 50%);;
+        // background-color: rosybrown;
+
+        // &:hover {
+        //     transform: scale(0.9);
+        // }
+        // object-fit: cover;
+    }
+}

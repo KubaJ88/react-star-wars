@@ -1,0 +1,10 @@
+@import "../../styles/base.scss";
+
+.error {
+    font-size: 10rem;
+    color: white;
+
+    @media only screen and (max-width: $bp-small) {
+        font-size: 5rem;
+    }
+}
