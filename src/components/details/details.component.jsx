@@ -17,8 +17,7 @@ const Detail = ({movies}) => {
 
     const choosen_movie = movies.movies.find(movie => movie.episode_id == movie_id);
 
-    console.log(choosen_movie)
-   
+       
     const {title, director, episode_id, producer, characters,
          planets, spacies, starships, vehicles, release_date} = choosen_movie
    
