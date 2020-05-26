@@ -10,8 +10,7 @@ import './home.styles.scss';
 
 const Home = ({onRequestMovies, movies, isPending}) => {
 
-    console.log(isPending)
-
+    
     useEffect( () => {
         onRequestMovies()
       },[])
